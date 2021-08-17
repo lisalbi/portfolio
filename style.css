@@ -18,6 +18,7 @@ body {
 }
 
 main {
+  font-size: 18px;
   min-height: 100%;
   width: 70%;
   max-width: 1200px;
@@ -110,6 +111,18 @@ header h3 {
 
 
 /*MY WORK*/
+#work h3 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+#work h3 a:hover {
+  text-decoration: underline;
+}
+
+#work h3 {
+  margin: 30px 0;
+}
+
 section .section-heading:after {
   margin: 0 20px;
   content: "";
@@ -263,6 +276,7 @@ $overlay-color: #fff; */
 
 /* NAVIGATION BAR */
 #nav-container {
+  font-size: 18px;
   width: 80%;
   padding: 40px;
   margin: auto;
