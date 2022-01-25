@@ -322,7 +322,7 @@ li a {
 }
 
 .nav-link {
-  color: var(--black);
+  color: var(--black) !important;
 }
 
 .nav-link:hover {
@@ -548,24 +548,24 @@ section .section-heading {
   }
 }
 
-.nav {
+#work .nav {
   border-top: 1px solid rgba(0, 0, 0, 0.185);
   border-bottom: 1px solid rgba(0, 0, 0, 0.185);
 }
 
-.nav a {
+#work .nav a {
 }
 
-.nav-item {
+#work .nav-item {
   cursor: pointer;
   font-weight: normal;
 }
 
-.nav-item .active {
+#work .nav-item .active {
   color: var(--black) !important;
   font-weight: bold;
 }
-.nav {
+#work .nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
