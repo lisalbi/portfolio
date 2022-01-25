@@ -12,9 +12,11 @@
 html,
 body {
   font-family: "brandon-grotesque", sans-serif;
-  min-height: 100%;
-  min-width: 100%;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 main {
@@ -27,10 +29,9 @@ main {
 }
 
 section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 80px 10px;
-    overflow: hidden;
+  margin: auto;
+  padding: 80px 10px;
+  overflow: hidden;
 }
 
 ul {
@@ -40,27 +41,26 @@ ul {
 /*HEADER*/
 
 header {
-    margin: 80px 0;
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    overflow: visible;
-    grid-gap: 50px;
+  margin: 80px 0;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  overflow: visible;
+  grid-gap: 50px;
 }
 
 .gif-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .contact-container {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .contact-container a {
-
   color: var(--accent) !important;
   text-decoration: none;
   border: 1px solid var(--accent);
@@ -75,7 +75,7 @@ header {
   box-shadow: 0 0 40px 40px var(--accent) inset;
 }
 
-header h1 {
+h1 {
   margin: 20px 0;
   font-size: 60px;
   font-family: "Helvetica";
@@ -84,7 +84,7 @@ header h1 {
 }
 
 header h2 {
-    font-size: 30px;
+  font-size: 30px;
   color: var(--accent);
 }
 
@@ -94,7 +94,7 @@ h3 {
 }
 
 header h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 #job-title {
@@ -108,9 +108,11 @@ header h3 {
   letter-spacing: 0.03em;
 }
 
-
-
 /*MY WORK*/
+#work h2 {
+  margin-bottom: 2rem;
+}
+
 #work h3 a {
   color: var(--accent);
   text-decoration: none;
@@ -123,7 +125,7 @@ header h3 {
   margin: 30px 0;
 }
 
-section .section-heading:after {
+#about .section-heading:after {
   margin: 0 20px;
   content: "";
   display: inline-block;
@@ -134,6 +136,7 @@ section .section-heading:after {
   margin-right: -100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.185);
 }
+
 img {
   height: 100%;
   width: 100%;
@@ -265,7 +268,7 @@ $overlay-color: #fff; */
 }
 
 .card-link:hover {
-  background-color: var(--accent);
+  background-color: var(--accent) !important;
   text-indent: -20px;
 }
 
@@ -277,8 +280,8 @@ $overlay-color: #fff; */
 /* NAVIGATION BAR */
 #nav-container {
   font-size: 18px;
-  width: 80%;
   padding: 40px;
+  padding-left: 0;
   margin: auto;
 }
 #nav-container ul {
@@ -305,10 +308,47 @@ li a {
   color: var(--accent);
 }
 
+.navbar {
+  margin-top: 3%;
+}
+
+#navbarNav {
+  justify-content: right;
+}
+
+.nav-item {
+  text-align: right;
+  margin: 5px;
+}
+
+.nav-link {
+  color: var(--black);
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.navbar li:last-child {
+  border: 1px solid var(--black);
+  border-radius: 5px;
+}
+
+.navbar li:last-child:hover {
+  border: 1px solid var(--accent);
+}
+
+/* HERO */
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* ABOUT ME */
 .about-info {
   place-self: center;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 80px;
   overflow: visible;
@@ -333,7 +373,7 @@ li a {
   object-fit: contain;
   position: relative;
   overflow: visible;
-  
+
   margin-bottom: 30px;
 }
 
@@ -346,6 +386,10 @@ li a {
   top: 10px;
   left: 10px;
   border: 1px dashed black;
+}
+
+#about .description {
+  padding-top: 15px;
 }
 
 .skills {
@@ -399,8 +443,7 @@ li a {
 }
 
 #contact {
-    min-width: 100%;
-    margin: 0;
+  margin: 0;
 }
 
 #contact h2 {
@@ -431,7 +474,7 @@ li a {
 }
 
 section .section-heading {
-  font-size: 30px;
+  font-size: px;
 }
 
 .nav-bar li:last-child {
@@ -443,29 +486,98 @@ section .section-heading {
   border: 1px solid var(--accent);
 }
 
+@media screen and (max-width: 900px) {
+  main {
+    width: 80%;
+  }
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 
-@media screen and (max-width : 900px) {
-    main {
-        width: 80%;
-      }
-    header {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .card-container {
-        grid-template-columns: 1fr;
-    }
+  .about-info {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #contact {
+    padding: 15px 20px;
+    margin-top: 20px;
+  }
+  section {
+    padding: 30px 10px;
+  }
+}
 
-    .about-info {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    #contact {
-        padding: 15px 20px;
-        margin-top: 20px;
-    }
-    section {
-        padding: 30px 10px;
-    }
+/* Slide In Elements */
+.slideanim {
+  visibility: hidden;
+}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 0.75s;
+  /* Make the element visible */
+  visibility: visible;
+}
 
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+.nav {
+  border-top: 1px solid rgba(0, 0, 0, 0.185);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+}
+
+.nav a {
+}
+
+.nav-item {
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.nav-item .active {
+  color: var(--black) !important;
+  font-weight: bold;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#marker {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  /* width: 100%; */
+  background: var(--accent);
+  right: 0;
+  transition: 0s;
+  border-radius: 4px;
 }
