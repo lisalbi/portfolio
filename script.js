@@ -54,6 +54,13 @@ function clearProjects() {
 function displayDevWork() {
   cardContainer.appendChild(
     createCard(
+      "EverWash Overhaul",
+      "./images/everwash.png",
+      "https://www.everwash.com/"
+    )
+  );
+  cardContainer.appendChild(
+    createCard(
       "Asahi Sushi",
       "./images/sushi.png",
       "https://lisalbi.github.io/restauraunt/"
