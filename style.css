@@ -548,12 +548,15 @@ section .section-heading {
     -webkit-transform: translateY(0%);
   }
 }
-
+/* Display the Dev and Design Bar */
 #work .nav {
   border-top: 1px solid rgba(0, 0, 0, 0.185);
   border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+  display: none !important;
 }
-
+#work #marker {
+  display: none !important;
+}
 #work .nav a {
 }
 
