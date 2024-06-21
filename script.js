@@ -61,6 +61,13 @@ function displayDevWork() {
   );
   cardContainer.appendChild(
     createCard(
+      "Job Tracker",
+      "./images/job-tracker.png",
+      "https://vite-project-lb.netlify.app/"
+    )
+  );
+  cardContainer.appendChild(
+    createCard(
       "Asahi Sushi",
       "./images/sushi.png",
       "https://lisalbi.github.io/restauraunt/"
@@ -87,13 +94,13 @@ function displayDevWork() {
       "https://lisalbi.github.io/etch-a-sketch/"
     )
   );
-  cardContainer.appendChild(
-    createCard(
-      "Rock Paper Scissors",
-      "./images/rock-paper-scissors.png",
-      "https://lisalbi.github.io/rock-paper-scissors/"
-    )
-  );
+  // cardContainer.appendChild(
+  //   createCard(
+  //     "Rock Paper Scissors",
+  //     "./images/rock-paper-scissors.png",
+  //     "https://lisalbi.github.io/rock-paper-scissors/"
+  //   )
+  // );
 }
 displayDevWork();
 displayDevBtn.classList.add("active");
@@ -154,3 +161,4 @@ function resizeMarker() {
 resizeMarker();
 
 window.onresize = resizeMarker;
+
