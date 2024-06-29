@@ -1,0 +1,42 @@
+.project-page .container {
+  max-width: 900px;
+}
+
+h1,
+h2 {
+  margin: 20px 0;
+  font-family: "Helvetica";
+  font-weight: bold;
+  letter-spacing: -0.02em;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+}
+p {
+  margin-bottom: 25px;
+}
+.container {
+  margin-bottom: max(3rem, 5%);
+}
+
+.container img,
+.container-fluid img {
+  margin-bottom: max(2rem, 3%) !important;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}

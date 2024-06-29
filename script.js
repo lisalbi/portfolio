@@ -55,7 +55,7 @@ function displayDevWork() {
   cardContainer.appendChild(
     createCard(
       "EverWash Overhaul",
-      "./images/everwash.png",
+      "./images/everwash.jpg",
       "https://www.everwash.com/"
     )
   );
@@ -63,7 +63,28 @@ function displayDevWork() {
     createCard(
       "Job Tracker",
       "./images/job-tracker.png",
-      "https://vite-project-lb.netlify.app/"
+      "https://react-jobtracker.netlify.app/"
+    )
+  );
+  cardContainer.appendChild(
+    createCard(
+      "Partners Landing Page",
+      "./images/everwash-partners.jpg",
+      "https://ew-redesign.netlify.app/wash-owners"
+    )
+  );
+  cardContainer.appendChild(
+    createCard(
+      "NRCC Event Page",
+      "./images/nrcc.jpg",
+      "https://www.everwash.com/nrcc"
+    )
+  );
+  cardContainer.appendChild(
+    createCard(
+      "Members Landing Page",
+      "./images/everwash-members.jpg",
+      "https://www.everwash.com/members"
     )
   );
   cardContainer.appendChild(
@@ -73,27 +94,27 @@ function displayDevWork() {
       "https://lisalbi.github.io/restauraunt/"
     )
   );
-  cardContainer.appendChild(
-    createCard(
-      "Calculator",
-      "./images/calculator.png",
-      "https://lisalbi.github.io/calculator/"
-    )
-  );
-  cardContainer.appendChild(
-    createCard(
-      "Tic Tac Toe",
-      "./images/tic-tac-toe.png",
-      "https://lisalbi.github.io/tic-tac-toe/"
-    )
-  );
-  cardContainer.appendChild(
-    createCard(
-      "Etch-A-Sketch",
-      "./images/etch-a-sketch.png",
-      "https://lisalbi.github.io/etch-a-sketch/"
-    )
-  );
+  // cardContainer.appendChild(
+  //   createCard(
+  //     "Calculator",
+  //     "./images/calculator.png",
+  //     "https://lisalbi.github.io/calculator/"
+  //   )
+  // );
+  // cardContainer.appendChild(
+  //   createCard(
+  //     "Tic Tac Toe",
+  //     "./images/tic-tac-toe.png",
+  //     "https://lisalbi.github.io/tic-tac-toe/"
+  //   )
+  // );
+  // cardContainer.appendChild(
+  //   createCard(
+  //     "Etch-A-Sketch",
+  //     "./images/etch-a-sketch.png",
+  //     "https://lisalbi.github.io/etch-a-sketch/"
+  //   )
+  // );
   // cardContainer.appendChild(
   //   createCard(
   //     "Rock Paper Scissors",
@@ -104,25 +125,44 @@ function displayDevWork() {
 }
 displayDevWork();
 displayDevBtn.classList.add("active");
-
+const designCardContainer = document.querySelector(".design-projects");
 function displayDesignWork() {
-  cardContainer.appendChild(
-    createCard("UniTutor", "./images/unitutor.png", "")
+  designCardContainer.appendChild(
+    createCard(
+      "Washerly",
+      "./images/washerly/washerly.png",
+      "/projects/washerly.html"
+    )
   );
-  cardContainer.appendChild(
-    createCard("Washerly", "./images/washerly.png", "")
+  designCardContainer.appendChild(
+    createCard(
+      "Tradepost",
+      "./images/tradepost/tradepost.png",
+      "/projects/tradepost.html"
+    )
   );
-  cardContainer.appendChild(
-    createCard("Amplification Project", "./images/amplification.png", "")
+  designCardContainer.appendChild(
+    createCard(
+      "UniTutor",
+      "./images/unitutor/cover-wide.png",
+      "/projects/unitutor.html"
+    )
   );
-  cardContainer.appendChild(createCard("Wazo", "./images/wazo.png", ""));
-  cardContainer.appendChild(
-    createCard("Tradepost", "./images/tradepost.png", "")
+
+  // designCardContainer.appendChild(
+  //   createCard("Amplification Project", "./images/amplification.png", "")
+  // );
+  designCardContainer.appendChild(
+    createCard("Wazo", "./images/wazo/logo.png", "/projects/wazo.html")
   );
-  cardContainer.appendChild(
-    createCard("Hydration No Sweat", "./images/hydration.png", "")
-  );
+
+  // cardContainer.appendChild(
+  //   createCard("Hydration No Sweat", "./images/hydration.png", "")
+  // );
 }
+
+displayDesignWork();
+displayDesignBtn.classList.add("active");
 
 $(window).scroll(function () {
   $(".slideanim").each(function () {
@@ -161,4 +201,3 @@ function resizeMarker() {
 resizeMarker();
 
 window.onresize = resizeMarker;
-
