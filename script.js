@@ -28,6 +28,35 @@ const createCard = (title, filePath, link) => {
   wrapper.appendChild(container);
   return wrapper;
 };
+const createDesignCard = (title, filePath, link) => {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("card-wrapper");
+
+  const container = document.createElement("div");
+  container.classList.add("card");
+
+  const img = document.createElement("img");
+  img.setAttribute("src", filePath);
+  img.setAttribute("alt", "project screenshot");
+  container.appendChild(img);
+
+  const cardInfo = document.createElement("div");
+  cardInfo.classList.add("card-info");
+
+  const cardTitle = document.createElement("p");
+  cardTitle.textContent = title;
+  cardInfo.appendChild(cardTitle);
+
+  const cardLink = document.createElement("a");
+  cardLink.textContent = "View Project";
+  cardLink.classList.add("card-link");
+  cardLink.setAttribute("href", link);
+  cardInfo.appendChild(cardLink);
+
+  container.appendChild(cardInfo);
+  wrapper.appendChild(container);
+  return wrapper;
+};
 
 const cardContainer = document.querySelector(".card-container");
 
@@ -128,36 +157,35 @@ displayDevBtn.classList.add("active");
 const designCardContainer = document.querySelector(".design-projects");
 function displayDesignWork() {
   designCardContainer.appendChild(
-    createCard(
+    createDesignCard(
       "Washerly",
       "./images/washerly/washerly.png",
       "/projects/washerly.html"
     )
   );
   designCardContainer.appendChild(
-    createCard(
+    createDesignCard(
       "Tradepost",
       "./images/tradepost/tradepost.png",
       "/projects/tradepost.html"
     )
   );
   designCardContainer.appendChild(
-    createCard(
+    createDesignCard(
       "UniTutor",
       "./images/unitutor/cover-wide.png",
       "/projects/unitutor.html"
     )
   );
-
-  // designCardContainer.appendChild(
-  //   createCard("Amplification Project", "./images/amplification.png", "")
-  // );
   designCardContainer.appendChild(
-    createCard("Wazo", "./images/wazo/logo.png", "/projects/wazo.html")
+    createDesignCard("Wazo", "./images/wazo/logo.png", "/projects/wazo.html")
   );
+  // designCardContainer.appendChild(
+  //   createDesignCard("Amplification Project", "./images/amplification.png", "")
+  // );
 
   // cardContainer.appendChild(
-  //   createCard("Hydration No Sweat", "./images/hydration.png", "")
+  //   createDesignCard("Hydration No Sweat", "./images/hydration.png", "")
   // );
 }
 
