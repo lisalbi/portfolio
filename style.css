@@ -332,15 +332,6 @@ li a {
   color: var(--accent) !important;
 }
 
-.navbar li:last-child {
-  border: 1px solid var(--black);
-  border-radius: 5px;
-}
-
-.navbar li:last-child:hover {
-  border: 1px solid var(--accent);
-}
-
 /* HERO */
 .grid-container {
   display: flex;
@@ -570,11 +561,6 @@ section .section-heading {
   border-radius: 4px;
 }
 
-@media (max-width: 768px) {
-  .navbar li:last-child {
-    border: none;
-  }
-}
 @media (max-width: 576px) {
   #header h1 {
     font-size: 40px;
